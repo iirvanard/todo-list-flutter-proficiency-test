@@ -8,7 +8,16 @@ karena pada implementasi autentifikasi hanya menggunakan basic auth, sehingga ma
 ## Analisa Kekuatan aplikasi yang di buat
 karena hanya menggunakan kode yang sederhana aplikasi bisa berjalan dengan cepat. dan implementasi mvc pada kode ini mudah untuk di kembangkan;
 
-
+## langkah pengembangan aplikasi
+Langkah-langkah utama pengerjaan aplikasi 
+1. memahami case yang akan diselesaikan
+2. analisa kebutuhan & alur aplikasi atau aliran data yang akan diibuat
+3. implementasikan model dan folder yang terstructure agar membantu pengembangan perangkat lunak
+4. pembuatan basis data dan relasi yang digunakan
+5. pembuatan instance/service yang akan digunakan sebagai jembatan antara model view dan controll
+6. membuat fitur-fitur yang akan menjadi penilaian
+7. refactoring kode sehingga kode tidak ada redundansi atau smellcode yang significan dan membantu readablitity pada kode yang dibuat
+8. testing manual fitur fitur yang sudah dibuat
 
 ## Penggunaan aplikasi
 

@@ -1,16 +1,9 @@
-# todo_iirvanard
 
-A new Flutter project.
+# Todo list flutter proficiency test
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Kesulitan yang dihadapi
+pada pembuatan project ini kesulitan yang di hadapi adalah penggunaan flutter pada versi os yang saya install (lubuntu 26.04) sehingga flutter walaupun sudah terinstall dengan benar saat menggunakan command taking too long to executed. sehingga membuat pengerjan tugas ini mengalami hambatan.
+## Analisa Kekurangan aplikasi yang di buat 
+karena pada implementasi autentifikasi hanya menggunakan basic auth, sehingga masih banyak error / bug yang tidak di handling dengan baik yang bisa dimanfaatkan oleh attacker untuk mencuri data dalam aplikasi (jika aplikasi memuat data sensitif)
+## Analisa Kekuatan aplikasi yang di buat
+karena hanya menggunakan kode yang sederhana aplikasi bisa berjalan dengan cepat. dan implementasi mvc pada kode ini mudah untuk di kembangkan;

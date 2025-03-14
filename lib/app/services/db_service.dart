@@ -1,7 +1,5 @@
-// lib/app/services/db_service.dart
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
-import '../models/user_model.dart';
 
 class DatabaseService {
   static Database? _database;
@@ -13,37 +11,39 @@ class DatabaseService {
   }
 
   static Future<Database> _initDB() async {
-    String path = join(await getDatabasesPath(), 'users.db');
-    return openDatabase(
+    String path = join(await getDatabasesPath(), 'app.db');
+
+    return await openDatabase(
       path,
-      version: 1,
-      onCreate: (db, version) {
-        return db.execute(
-          "CREATE TABLE users(id INTEGER PRIMARY KEY, username TEXT, password TEXT)",
-        );
+      version: 2, // Naikkan versi jika ada perubahan struktur
+      onCreate: (db, version) async {
+        await db.execute('''
+          CREATE TABLE users (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            username TEXT UNIQUE NOT NULL,
+            password TEXT NOT NULL
+          )
+        ''');
+
+        await db.execute('''
+          CREATE TABLE todos (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            title TEXT NOT NULL,
+            description TEXT NOT NULL,
+            isCompleted INTEGER NOT NULL DEFAULT 0,
+            user_id INTEGER NOT NULL,
+            deadline TEXT NOT NULL,
+            FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+          )
+        ''');
+      },
+      onUpgrade: (db, oldVersion, newVersion) async {
+        if (oldVersion < 2) {
+          await db.execute(
+            'ALTER TABLE todos ADD COLUMN deadline TEXT NOT NULL DEFAULT "2099-12-31T23:59:59.999Z"',
+          );
+        }
       },
     );
-  }
-
-  static Future<int> registerUser(User user) async {
-    final db = await database;
-    return await db.insert('users', user.toMap());
-  }
-
-  static Future<User?> getUser(String username) async {
-    final db = await database;
-    List<Map<String, dynamic>> maps = await db.query(
-      'users',
-      where: 'username = ?',
-      whereArgs: [username],
-    );
-    if (maps.isNotEmpty) {
-      return User(
-        id: maps.first['id'],
-        username: maps.first['username'],
-        password: maps.first['password'],
-      );
-    }
-    return null;
   }
 }

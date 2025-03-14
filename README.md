@@ -8,6 +8,9 @@ karena pada implementasi autentifikasi hanya menggunakan basic auth, sehingga ma
 ## Analisa Kekuatan aplikasi yang di buat
 karena hanya menggunakan kode yang sederhana aplikasi bisa berjalan dengan cepat. dan implementasi mvc pada kode ini mudah untuk di kembangkan;
 
+## strategy dan dasar pemilihan arsitektur 
+dengan menggunakan model arsitektur model view controll, pengembangan untuk skala kecil saya pilih karena memiliki kecepatan dan efektifitas pengembangan perangkat lunak, karena komponen-komponen didalamnya dibuat dengan struktur yang mduah dipahami dan cepat untuk di implementasikan sehingga tidak memerlukan waktu lebih untuk melakukan proses development, namun kekurangan dari model arsitektur ini adalah ketika komponen yang ditambahkan semakin kompleks, kode yang dihasilkan lebih sulit untuk di tracking dan di kembangkan karena struktur (menurut pendapat saya) 
+
 ## langkah pengembangan aplikasi
 Langkah-langkah utama pengerjaan aplikasi 
 1. memahami case yang akan diselesaikan
@@ -20,7 +23,6 @@ Langkah-langkah utama pengerjaan aplikasi
 8. testing manual fitur fitur yang sudah dibuat
 
 ## Penggunaan aplikasi
-
 Aplikasi Flutter ini menyediakan fitur autentikasi, manajemen tugas, dan integrasi dengan SQLite untuk penyimpanan lokal. Dokumentasi ini akan memandu Anda untuk membangun dan menjalankan aplikasi dalam mode **Development** dan **Production**.
 
 ## Prasyarat

@@ -9,7 +9,7 @@ karena pada implementasi autentifikasi hanya menggunakan basic auth, sehingga ma
 karena hanya menggunakan kode yang sederhana aplikasi bisa berjalan dengan cepat. dan implementasi mvc pada kode ini mudah untuk di kembangkan;
 
 ## strategy dan dasar pemilihan arsitektur 
-dengan menggunakan model arsitektur model view controll, pengembangan untuk skala kecil saya pilih karena memiliki kecepatan dan efektifitas pengembangan perangkat lunak, karena komponen-komponen didalamnya dibuat dengan struktur yang mduah dipahami dan cepat untuk di implementasikan sehingga tidak memerlukan waktu lebih untuk melakukan proses development, namun kekurangan dari model arsitektur ini adalah ketika komponen yang ditambahkan semakin kompleks, kode yang dihasilkan lebih sulit untuk di tracking dan di kembangkan karena struktur (menurut pendapat saya) 
+dengan menggunakan model arsitektur model view controll, pengembangan untuk skala kecil saya pilih karena memiliki kecepatan dan efektifitas pengembangan perangkat lunak, karena komponen-komponen didalamnya dibuat dengan struktur yang mduah dipahami dan cepat untuk di implementasikan sehingga tidak memerlukan waktu lebih untuk melakukan proses development, namun kekurangan dari model arsitektur ini adalah ketika komponen yang ditambahkan semakin kompleks, kode yang dihasilkan lebih sulit untuk di tracking dan di kembangkan karena folder dan kode yang dibuat akan lebih banyak (menurut pendapat saya) 
 
 ## langkah pengembangan aplikasi
 Langkah-langkah utama pengerjaan aplikasi 
